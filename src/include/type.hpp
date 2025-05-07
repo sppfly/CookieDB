@@ -16,7 +16,7 @@ private:
     u32    sizeInBytes;
 
 public:
-    Type(TypeId typeId, u32 sizeInBytes);
+    Type(TypeId, u32);
     const TypeId& getTypeId() const;
     u32           getSizeInBytes() const;
 

@@ -46,7 +46,7 @@ public:
 
     i32 intValue() const;
 
-    bool operator<(const IntDataBox&) const;
-    // auto operator<=>(const IntDataBox&) const;
+    std::strong_ordering operator<=>(const IntDataBox&) const;
+    bool                 operator==(const IntDataBox&) const;
 };
 }

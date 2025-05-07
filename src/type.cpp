@@ -3,9 +3,9 @@
 #include <string>
 
 namespace CookieDB {
-Type::Type(TypeId typeId, u32 sizeInBytes)
-    : typeId(typeId)
-    , sizeInBytes(sizeInBytes)
+Type::Type(TypeId _typeId, u32 _sizeInBytes)
+    : typeId(_typeId)
+    , sizeInBytes(_sizeInBytes)
 {
 }
 
