@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
-project(rash VERSION 0.1)
+project(CookieDB VERSION 0.1)
 
 # Options for enabling various checks (all ON by default)
 option(ENABLE_CLANG_TIDY "Enable clang-tidy checks" ON)
@@ -31,7 +31,7 @@ if(ENABLE_SANITIZERS)
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
 endif()
 
-set(RASH_SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
-include_directories(${RASH_SRC_INCLUDE_DIR})
+set(CookieDB_SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
+include_directories(${CookieDB_SRC_INCLUDE_DIR})
 
-add_executable(rash ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_executable(CookieDB ${PROJECT_SOURCE_DIR}/src/main.cpp)

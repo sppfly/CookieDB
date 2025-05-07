@@ -5,7 +5,7 @@
 #include "basic.hpp"
 #include "type.hpp"
 
-namespace rash {
+namespace CookieDB {
 
 
 class Tuple {
@@ -17,4 +17,4 @@ public:
 private:
     std::vector<DataBox> data;
 };
-} // namespace rash
+} // namespace CookieDB

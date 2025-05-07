@@ -1,3 +1,3 @@
-namespace rash {
+namespace CookieDB {
     
 }

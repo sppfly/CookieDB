@@ -1,7 +1,7 @@
 #include "databox.hpp"
 #include <compare>
 
-namespace rash {
+namespace CookieDB {
 const Type IntDataBox::type() const
 {
     return Type::intType();

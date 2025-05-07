@@ -4,7 +4,7 @@
 #include <concepts>
 #include <stdexcept>
 
-namespace rash {
+namespace CookieDB {
 
 template <typename T>
 concept HasThreeWayComparison = requires(T a, T b) {

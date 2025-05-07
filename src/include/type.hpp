@@ -2,7 +2,7 @@
 #include <expected>
 #include <string>
 
-namespace rash {
+namespace CookieDB {
 
 enum class TypeId {
     INT,

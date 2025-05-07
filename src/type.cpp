@@ -2,7 +2,7 @@
 #include <expected>
 #include <string>
 
-namespace rash {
+namespace CookieDB {
 Type::Type(TypeId typeId, u32 sizeInBytes)
     : typeId(typeId)
     , sizeInBytes(sizeInBytes)
@@ -32,4 +32,4 @@ std::expected<Type, std::string> Type::stringType(u32 size)
     return std::expected<Type, std::string>(Type(TypeId::STRING, size));
 }
 
-} // namespace rash
+} // namespace CookieDB
