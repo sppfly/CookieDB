@@ -7,3 +7,4 @@ Language: Cpp
 DerivePointerAlignment: false
 PointerAlignment: Left
 AlignConsecutiveDeclarations: true
+# BreakBeforeBrace: BS_Attach

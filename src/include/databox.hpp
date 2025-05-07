@@ -19,29 +19,33 @@ class ComparableBase {
 
 class DataBox {
 public:
-    virtual Type   type() = 0;
-    virtual TypeId typeId() = 0;
+    virtual const Type type() const = 0;
+    virtual TypeId     typeId() const = 0;
 
-    virtual u32 intValue()
+    i32 intValue()
     {
-        throw new std::logic_error("unimplemented");
+        throw std::logic_error("unimplemented");
     }
 
     // question: should I return string or its reference?
-    virtual std::string stringValue()
+    std::string stringValue()
     {
-        throw new std::logic_error("unimplemented");
-    };
+        throw std::logic_error("unimplemented");
+    }
 };
 
-class IntDataBox : DataBox, public ComparableBase<DataBox> {
+class IntDataBox : DataBox {
 private:
     i32 value;
 
 public:
-    std::strong_ordering operator<=>(DataBox);
-};
-class StringDataBox : DataBox {
-private:
+    explicit IntDataBox(i32);
+
+    const Type type() const override;
+    TypeId     typeId() const override;
+
+    i32 intValue() const;
+
+    std::strong_ordering operator<=>(const IntDataBox&);
 };
 }
