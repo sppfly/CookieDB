@@ -1,12 +1,10 @@
-#include <stdexcept>
 #include <string>
 #include <vector>
 
 #include "basic.hpp"
-#include "type.hpp"
+#include "databox.hpp"
 
 namespace CookieDB {
-
 
 class Tuple {
 public:

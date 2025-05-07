@@ -6,16 +6,16 @@
 
 namespace CookieDB {
 
-// template <typename T>
-// concept HasThreeWayComparison = requires(T a, T b) {
-//     { a <=> b } -> std::same_as<std::strong_ordering>;
-// };
+template <typename T>
+concept HasThreeWayComparison = requires(T a, T b) {
+    { a <=> b } -> std::same_as<std::strong_ordering>;
+};
 
-// template <typename T>
-// class ComparableBase {
-//     static_assert(HasThreeWayComparison<T>,
-//         "Derived class must implement operator<=> returning std::strong_ordering");
-// };
+template <typename T>
+class ComparableBase {
+    static_assert(HasThreeWayComparison<T>,
+        "Derived class must implement operator<=> returning std::strong_ordering");
+};
 
 class DataBox {
 public:
@@ -49,4 +49,7 @@ public:
     std::strong_ordering operator<=>(const IntDataBox&) const;
     bool                 operator==(const IntDataBox&) const;
 };
+
+// todo: what is this?
+template class ComparableBase<CookieDB::IntDataBox>;
 }
