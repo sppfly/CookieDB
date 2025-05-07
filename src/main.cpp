@@ -6,5 +6,7 @@ int main() {
     
     CookieDB::IntDataBox ib1(1);
     CookieDB::IntDataBox ib2(2);
-    assert((ib1 <=> ib2) < 0);
+    // assert((ib1 <=> ib2) < 0);
+    assert(ib1 < ib2);
+    // std::println("{}", ib1);
 }

@@ -34,4 +34,11 @@ endif()
 set(CookieDB_SRC_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/src/include)
 include_directories(${CookieDB_SRC_INCLUDE_DIR})
 
-add_executable(CookieDB ${PROJECT_SOURCE_DIR}/src/main.cpp)
+
+
+set(SRC
+    src/databox.cpp
+    src/tuple.cpp
+    src/type.cpp
+)
+add_executable(CookieDB ${PROJECT_SOURCE_DIR}/src/main.cpp ${SRC})

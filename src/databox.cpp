@@ -1,5 +1,4 @@
 #include "databox.hpp"
-#include <compare>
 
 namespace CookieDB {
 const Type IntDataBox::type() const
@@ -16,7 +15,11 @@ i32 IntDataBox::intValue() const {
     return value;
 }
 
-std::strong_ordering IntDataBox::operator<=>(const IntDataBox& rhs) {
-    return this->value<=>rhs.value;
+bool IntDataBox::operator<(const IntDataBox& rhs) const {
+    return this->value < rhs.value;
 }
+
+// auto IntDataBox::operator<=>(const IntDataBox& rhs) const {
+//     return this->value<=>rhs.value;
+// }
 }
