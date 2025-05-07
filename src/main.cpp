@@ -6,5 +6,5 @@ int main() {
     
     rash::IntDataBox ib1(1);
     rash::IntDataBox ib2(2);
-    assert(ib1 <=> ib2 < 0)
+    assert((ib1 <=> ib2) < 0);
 }
